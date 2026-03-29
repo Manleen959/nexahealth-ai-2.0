@@ -11,29 +11,31 @@
 ---
 
 ### **Phase 2: Live Backend (Render.com)**
-1.  **Repo**: Create a new GitHub Repository named `nexahealth-backend` and push the `backend/` folder contents inside it.
+1.  **Repo**: Create a new GitHub Repository named `nexahealth-ai-2.0` and push the **entire project** (both `backend/` and `frontend/` folders) inside it.
 2.  **Deploy**: On [Render](https://render.com), create a **Web Service**.
 3.  **Config**:
+    *   **Root Directory**: `backend` (This is very important!)
     *   **Build Command**: `npm install`
     *   **Start Command**: `node server.js`
-4.  **Environment Variables** (Very Important!):
+4.  **Environment Variables**:
     *   `MONGODB_URI`: (Your Atlas URI from Phase 1)
     *   `JWT_SECRET`: `NXAI-SECRET-8829-PX`
     *   `NVIDIA_API_KEY`: `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`
     *   `NODE_ENV`: `production`
-5.  **Copy Live URL**: It will look like `https://nexahealth-backend.onrender.com`.
+5.  **Copy Live URL**: It will look like `https://backend-xyz.onrender.com`.
 
 ---
 
 ### **Phase 3: Live Website (Netlify)**
-1.  **Repo**: Create another GitHub Repo named `nexahealth-frontend` and push the `frontend/` folder contents.
+1.  **Repo**: Connect the SAME GitHub Repo `nexahealth-ai-2.0` to Netlify.
 2.  **Build Settings**:
+    *   **Base Directory**: `frontend` (This is critical!)
     *   **Build Command**: `npm run build`
-    *   **Publish Directory**: `dist`
+    *   **Publish Directory**: `dist` 
 3.  **Environment Variables**:
     *   **`VITE_API_URL`**: (Paste your Live Render URL from Phase 2 + `/api`)
-        *   e.g., `https://nexahealth-backend.onrender.com/api`
-4.  **Deployed!**: Your site is now live on `https://your-app-name.netlify.app`.
+        *   e.g., `https://backend-xyz.onrender.com/api`
+4.  **Deployed!**: Your site is now live.
 
 ---
 
