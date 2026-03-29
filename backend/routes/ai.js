@@ -6,8 +6,8 @@ const protect = require('../middleware/authMiddleware');
 const axios = require('axios');
 
 const JWT_SECRET = process.env.JWT_SECRET || 'secret_key';
-const NUTRI_API_KEY = "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";
 const DEFAULT_API_KEY = process.env.NVIDIA_API_KEY || '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';
+const NUTRI_API_KEY = process.env.NUTRI_API_KEY || DEFAULT_API_KEY;
 
 router.use(protect);
 

@@ -7,7 +7,7 @@ const protect = require('../middleware/authMiddleware');
 
 const JWT_SECRET = process.env.JWT_SECRET || 'secret_key';
 
-// router.use(protect);
+router.use(protect);
 
 router.get('/history', async (req, res) => {
     try {
